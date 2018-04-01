@@ -1,13 +1,13 @@
 <main class="home-view">
-  <section class = "sidebar">
+  <section class="sidebar">
     <h1>Bloc Chat</h1>
-    <div>{{JSON.stringify(home)}}</div>
-    <div class="room-list" ng-repeat="room in home.rooms">
-      <h3>{{ room.$id }}</h3>
+    <div ng-controller="ModalCtrl as modal">
+      <button type="button" class="new-room-button" ng-click="modal.open()">New Room</button>
+    </div>
+    <div class="room-list">
+      <div ng-repeat="room in home.rooms">
+        <h3>{{ room.$value }}</h3>
+      </div>
     </div>
   </section>
-  <section class = "chat-room">
-    <p>Content</p>
-  </section>
-
 </main>
