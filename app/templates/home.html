@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<main class="home-view">
+  <section class = "sidebar">
+    <h1>Bloc Chat</h1>
+    <div>{{JSON.stringify(home)}}</div>
+    <div class="room-list" ng-repeat="room in home.rooms">
+      <h3>{{ room.$id }}</h3>
+    </div>
+  </section>
+  <section class = "chat-room">
+    <p>Content</p>
+  </section>
+
+</main>
