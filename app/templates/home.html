@@ -6,8 +6,16 @@
     </div>
     <div class="room-list">
       <div ng-repeat="room in home.rooms">
-        <h3>{{ room.$value }}</h3>
+         <h3 class="sidebar-room" ng-click="home.changeRoom(room)">{{ room.$value }}</h3>
       </div>
     </div>
   </section>
+  <div class="chat-room">
+    <h1 class="active-room-title">{{ home.activeRoom.$value }}</h1>
+    <div class="message" ng-repeat="message in home.messages">
+      <div class="message-username">{{ message.username }}</div>
+      <div class="message-time">{{ message.sentAt }}</div>
+      <div class="message-content">{{ message.content }}</div>
+    </div>
+  </div>
 </main>
