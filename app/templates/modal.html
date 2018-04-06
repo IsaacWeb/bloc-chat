@@ -2,7 +2,7 @@
   <h2 class="modal-title">Create new room</h2>
   <div class="modal-body">
     <p>Enter a room name</p>
-    <form ng-submit="modal.ok()">
+    <form ng-submit="modal.submit()">
       <div class="input-group">
         <input type="text" class="form-control input-lg" ng-model="modal.name" title="room-name" autofocus>
       </div>
@@ -16,4 +16,5 @@
       <button class="btn modal-btn-create" type="button" ng-click="modal.submit()">Create room</button>
     </div>
   </div>
+</div>
 </div>

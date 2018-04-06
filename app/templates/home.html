@@ -18,4 +18,10 @@
       <div class="message-content">{{ message.content }}</div>
     </div>
   </div>
+  <div id=""="new-message">
+   <form ng-submit="home.sendMessage(home.newMessage, home.activeRoom)">
+     <div class="input-group">
+       <input type="text" class="form-control" ng-model="home.newMessage" title="message" autofocus>
+       <span class="input-group-btn"><button class="btn btn-default modal-btn-create" type="button" ng-click="home.sendMessage()">Send</button></span>
+     </div>
 </main>
